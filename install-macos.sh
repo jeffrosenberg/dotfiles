@@ -81,7 +81,7 @@ fi
 # Install Homebrew packages
 ########################################
 
-brew bundle
+brew bundle || true
 
 # Update python with the latest python 3 version:
 # https://opensource.com/article/19/5/python-3-default-mac

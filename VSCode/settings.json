@@ -1,30 +1,34 @@
 {
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "workbench.startupEditor": "newUntitledFile",
-
   // Editor behavior
   "editor.tabSize": 2,
   "editor.wordSeparators": "`~!#%^&*()-=+{}\\|;:'\",.<>/?",
+  "editor.emptySelectionClipboard": false,
+  "editor.suggestSelection": "first",
+  "extensions.ignoreRecommendations": true,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.autoReveal": false,
+  "problems.autoReveal": false,
+  "scm.autoReveal": false,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "window.newWindowDimensions": "inherit",
+  "workbench.list.horizontalScrolling": true,
+  "workbench.startupEditor": "newUntitledFile",
 
-  // Terminal behavior
-  "terminal.integrated.rightClickCopyPaste": true,
-
-  // Editor view settings
+  // Editor view
   "editor.renderControlCharacters": true,
   "editor.renderWhitespace": "all",
-  "workbench.panel.location": "bottom",
-  "window.newWindowDimensions": "inherit",
-  "editor.fontFamily": "'FuraCode Nerd Font', 'FiraCode NF', 'FiraCode Nerd Font', 'Fira Code', Menlo, Monaco, 'Courier New', monospace",
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "java.configuration.checkProjectSettingsExclusions": false,
-  "workbench.list.horizontalScrolling": true,
-  "editor.emptySelectionClipboard": false,
+  "editor.fontFamily": "'FiraCode Nerd Font', 'Fira Code', Menlo, Consolas, monospace",
+  "editor.fontSize": 12,
+  "editor.fontLigatures": true,
   "editor.bracketPairColorization.enabled": true,
+  "debug.console.fontSize": 12,
+  "workbench.colorTheme": "Default Light+",
 
-  // Terminal
+  // Terminal behavior
   "powershell.integratedConsole.showOnStartup": false,
   "powershell.developer.editorServicesLogLevel": "Verbose",
+  "powershell.promptToUpdatePowerShell": false,
   "terminal.integrated.profiles.windows": {
     "PowerShell": {
       "path": [
@@ -78,42 +82,33 @@
   },
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.defaultProfile.osx": "bash",
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "extensions.ignoreRecommendations": true,
-  "java.errors.incompleteClasspath.severity": "ignore",
-  "terminal.integrated.fontFamily": "'Fira Mono for Powerline', 'FuraCode Nerd Font', 'FiraCode NF', 'FiraCode Nerd Font', 'Fira Code', Menlo, Monaco, 'Courier New', monospace",
-  "powershell.promptToUpdatePowerShell": false,
   "terminal.external.osxExec": "iTerm.app",
   "terminal.external.windowsExec": "pwsh.exe",
+
+  // Terminal view
+  "terminal.integrated.fontFamily": "'FiraCode Nerd Font', 'Fira Code', Menlo, Consolas, monospace",
   "terminal.integrated.cursorStyle": "line",
-  "maven.executable.path": "/Users/jrosenberg/.jenv/shims/mvn",
+  "terminal.integrated.allowChords": false,
+  "terminal.integrated.fontWeight": "normal",
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.detectLocale": "on",
+
+  // Other
+  "security.workspace.trust.untrustedFiles": "open",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  // Kubernetes
   "vs-kubernetes": {
     "vs-kubernetes.helm-path.mac": "/Users/jrosenberg/.vs-kubernetes/tools/helm/darwin-amd64/helm",
     "vs-kubernetes.kubectl-path.mac": "/Users/jrosenberg/.vs-kubernetes/tools/kubectl/kubectl",
     "vs-kubernetes.minikube-path.mac": "/Users/jrosenberg/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
     "vs-kubernetes.draft-path.mac": "/Users/jrosenberg/.vs-kubernetes/tools/draft/darwin-amd64/draft"
   },
-  "scm.autoReveal": false,
-  "explorer.autoReveal": false,
-  "problems.autoReveal": false,
-  "mssql.connections": [
-    {
-      "server": "{{put-server-name-here}}",
-      "database": "{{put-database-name-here}}",
-      "user": "{{put-username-here}}",
-      "password": "{{put-password-here}}"
-    }
-  ],
-  "workbench.colorTheme": "Default Light+",
-  "security.workspace.trust.untrustedFiles": "open",
-  "editor.fontLigatures": true,
-  "terminal.integrated.allowChords": false,
-  "terminal.integrated.fontWeight": "normal",
-  "terminal.integrated.detectLocale": "on",
-  "editor.fontSize": 12,
-  "debug.console.fontSize": 12,
-  "terminal.integrated.fontSize": 12,
+
+  // Java
+  "java.errors.incompleteClasspath.severity": "ignore",
+  "java.configuration.checkProjectSettingsExclusions": false,
+  "maven.executable.path": "/Users/jrosenberg/.jenv/shims/mvn",
 
   // Go
   "go.toolsManagement.autoUpdate": true,
