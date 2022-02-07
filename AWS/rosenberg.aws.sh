@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-export PATH="/Users/jeff/.ebcli-virtual-env/executables:$PATH"
+export PATH="${PATH}:${HOME}/.ebcli-virtual-env/executables"
 export AWS_EB_PROFILE="jeff-dev"
 export AWS_PROFILE="jeff-dev"
 export AWS_CONFIG_FILE="${DOTFILES}/aws/rosenberg.aws.config"

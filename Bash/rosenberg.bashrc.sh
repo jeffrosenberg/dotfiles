@@ -29,25 +29,26 @@ if [[ ${PROFILE_BASHRC} -eq 1 ]]; then
   set -x
 fi
 
-BREW="${BREW:-/usr/local}" # hardcode this to avoid performance penalty -- you can override in an individual .profile file
-
 ########################################
 # Source aliases, variables, extensions, etc. for other tools
 ########################################
 sources=("$DOTFILES/Bash/env.sh") # Bash env
-dotfiles_include "docker"     && sources+=("$DOTFILES/Docker/rosenberg.docker.sh") # Docker
-dotfiles_include "dotnet"     && sources+=("$DOTFILES/Dotnet/rosenberg.dotnet.sh") # .NET
-dotfiles_include "maven"      && sources+=("$DOTFILES/Maven/rosenberg.maven.sh") #Maven
-dotfiles_include "java"       && sources+=("$DOTFILES/Java/rosenberg.java.sh") # Java
+dotfiles_include "docker"     && sources+=("$DOTFILES/Docker/rosenberg.docker.sh")
+dotfiles_include "dotnet"     && sources+=("$DOTFILES/Dotnet/rosenberg.dotnet.sh")
+dotfiles_include "maven"      && sources+=("$DOTFILES/Maven/rosenberg.maven.sh")
+dotfiles_include "java"       && sources+=("$DOTFILES/Java/rosenberg.java.sh")
 (dotfiles_include "kubernetes" || dotfiles_include "openshift") && \
-                                 sources+=("$DOTFILES/kubernetes/rosenberg.kubernetes.sh") # kubernetes
-dotfiles_include "olson"      && sources+=("$DOTFILES/Olson/rosenberg.olson.sh") # Work-specific config
-dotfiles_include "aws"        && sources+=("$DOTFILES/AWS/rosenberg.aws.sh") #AWS
-dotfiles_include "golang"     && sources+=("$DOTFILES/GoLang/rosenberg.golang.sh") #Go
-dotfiles_include "git"        && sources+=("$DOTFILES/Git/rosenberg.git.sh") # Git
-dotfiles_include "sql"        && sources+=("$DOTFILES/SQL/rosenberg.sql.sh") # SQL
-dotfiles_include "node"       && sources+=("$DOTFILES/Node/rosenberg.node.sh") # Node
-dotfiles_include "spotify"    && sources+=("$DOTFILES/Spotify/rosenberg.spotify.sh") # Spotify
+                                 sources+=("$DOTFILES/kubernetes/rosenberg.kubernetes.sh")
+dotfiles_include "olson"      && sources+=("$DOTFILES/Olson/rosenberg.olson.sh")
+dotfiles_include "aws"        && sources+=("$DOTFILES/AWS/rosenberg.aws.sh")
+dotfiles_include "golang"     && sources+=("$DOTFILES/Golang/rosenberg.golang.sh")
+dotfiles_include "git"        && sources+=("$DOTFILES/Git/rosenberg.git.sh")
+dotfiles_include "sql"        && sources+=("$DOTFILES/SQL/rosenberg.sql.sh")
+dotfiles_include "node"       && sources+=("$DOTFILES/Node/rosenberg.node.sh")
+dotfiles_include "spotify"    && sources+=("$DOTFILES/Spotify/rosenberg.spotify.sh")
+dotfiles_include "kitty"      && sources+=("$DOTFILES/Kitty/rosenberg.kitty.sh")
+# dotfiles_include "kde"        && sources+=("$DOTFILES/KDE/rosenberg.kde.sh")
+# dotfiles_include "bitwarden"  && sources+=("$DOTFILES/Bitwarden/rosenberg.bitwarden.sh")
 
 for source in ${sources[@]}; do
 	if [[ ${PROFILE_BASHRC} -eq 1 ]]; then

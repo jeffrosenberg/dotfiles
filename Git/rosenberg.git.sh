@@ -14,7 +14,7 @@ export PS1_STATUS="${PS1_STATUS}"' [$(__git_ps1 "%s")] '
 echo "Git path: $(which git)"
 
 # Source these if Git is installed through Homebrew
-if [ -f "${BREW}/opt/bash-git-prompt/share/gitprompt.sh" ]; then
+if [ -n "${BREW}" ] && [ -f "${BREW}/opt/bash-git-prompt/share/gitprompt.sh" ]; then
   source "${BREW}/etc/bash_completion.d/git-completion.bash"
   # source "${BREW}/opt/bash-git-prompt/share/gitprompt.sh" # bash-git-prompt is too heavy
   source "${BREW}/etc/bash_completion.d/git-prompt.sh"

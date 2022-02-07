@@ -3,11 +3,10 @@ Linking an external path, like I'm doing for Git/Bash/PowerShell, isn't supporte
 Mac:
 ```bash
 pushd ~/'Library/Application Support/Code/User'
-rm -f *.json
 rm -rf snippets/
-ln -s "$DOTFILES/VSCode/settings.json"
-ln -s "$DOTFILES/VSCode/keybindings.json"
-ln -s "$DOTFILES/VSCode/snippets/"
+ln -sf "$DOTFILES/VSCode/settings.json"
+ln -sf "$DOTFILES/VSCode/keybindings.json"
+ln -sfr "$DOTFILES/VSCode/snippets/"
 popd
 ```
 
@@ -15,9 +14,19 @@ popd
 pushd ~/'Library/Application Support/Code/User'
 rm -Force *.json
 rm -Recurse -Force snippets/
-ln -s "$Env:DOTFILES/VSCode/settings.json"
-ln -s "$Env:DOTFILES/VSCode/keybindings.json"
-ln -s "$Env:DOTFILES/VSCode/snippets/"
+ln -s "$DOTFILES/VSCode/settings.json"
+ln -s "$DOTFILES/VSCode/keybindings.json"
+ln -s "$DOTFILES/VSCode/snippets/"
+popd
+```
+
+Linux
+```bash
+pushd ~/.config/Code/User
+rm -rf snippets/
+ln -sf "$DOTFILES/VSCode/settings.json"
+ln -sf "$DOTFILES/VSCode/keybindings.json"
+ln -sfr "$DOTFILES/VSCode/snippets/"
 popd
 ```
 
