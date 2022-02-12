@@ -4,3 +4,6 @@
 [submodule "Alacritty/alacritty-theme"]
 	path = Alacritty/alacritty-theme
 	url = https://github.com/eendroroy/alacritty-theme.git
+[submodule "Sway/kanshi"]
+	path = Sway/kanshi
+	url = https://git.sr.ht/~emersion/kanshi

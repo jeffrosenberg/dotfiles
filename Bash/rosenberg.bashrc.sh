@@ -48,6 +48,7 @@ dotfiles_include "node"       && sources+=("$DOTFILES/Node/rosenberg.node.sh")
 dotfiles_include "spotify"    && sources+=("$DOTFILES/Spotify/rosenberg.spotify.sh")
 dotfiles_include "kitty"      && sources+=("$DOTFILES/Kitty/rosenberg.kitty.sh")
 # dotfiles_include "kde"        && sources+=("$DOTFILES/KDE/rosenberg.kde.sh")
+dotfiles_include "sway"       && sources+=("$DOTFILES/Sway/rosenberg.sway.bash")
 # dotfiles_include "bitwarden"  && sources+=("$DOTFILES/Bitwarden/rosenberg.bitwarden.sh")
 
 for source in ${sources[@]}; do
