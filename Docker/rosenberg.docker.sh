@@ -5,6 +5,8 @@
 # Enabled Docker buildkit
 export DOCKER_BUILDKIT=1
 
+alias dockerstart='systemctl start docker'
+
 ########################################
 # Docker aliases
 ########################################
