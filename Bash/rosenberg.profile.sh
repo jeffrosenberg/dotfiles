@@ -5,12 +5,25 @@ if [[ ! -f $DOTFILESTOLOAD ]]; then
   echo "Please define all modules to be loaded in ~/.dotfilestoload" >&2
 fi
 
-########################################
+#########################################
 # Environment variables
 #########################################
 
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_CONFIG_HOME=$HOME/.config
+
+#########################################
+# Make the OS available as an env var
+#########################################
+
+case "$(uname -s)" in
+    Linux*)     OS=Linux;;
+    Darwin*)    OS=Mac;;
+    CYGWIN*)    OS=Cygwin;;
+    MINGW*)     OS=MinGw;;
+    *)          OS=Unknown
+esac
+echo "OS: ${OS}"
 
 #########################################
 # Aliases

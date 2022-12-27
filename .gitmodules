@@ -7,3 +7,6 @@
 [submodule "Sway/kanshi"]
 	path = Sway/kanshi
 	url = https://git.sr.ht/~emersion/kanshi
+[submodule "Sway/bumblebee-status"]
+	path = Sway/bumblebee-status
+	url = https://github.com/tobi-wan-kenobi/bumblebee-status.git
