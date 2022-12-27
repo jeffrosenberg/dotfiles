@@ -86,6 +86,8 @@ alias dev='git dev'
 alias devp='git devp'
 alias main='git main'
 alias mainp='git mainp'
+alias master='git master'
+alias masterp='git masterp'
 
 alias merge='git merge'
 

@@ -107,7 +107,7 @@ if dotfiles_include "bash"; then # Bash development... Bash itself it always nee
 fi
 
 if dotfiles_include "kubernetes"; then
-  brew install kubectl hyperkit docker-machine-driver-hyperkit helm kube-ps1 || true
+  brew install kubectl hyperkit docker-machine-driver-hyperkit helm kube-ps1 kubectx|| true
   sudo chown root:wheel $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
   sudo chmod u+s $(brew --prefix)/opt/docker-machine-driver-xhyve/bin/docker-machine-driver-xhyve
 
@@ -176,4 +176,8 @@ fi
 if dotfiles_include "amethyst"; then
   brew install --cask amethyst
   echo "To enable Amethyst, manually launch it and provide the required accessibility permissions"
+fi
+
+if dotfiles_include "aws" || dotfiles_include "aws_optum"; then
+  brew install --cask aws-vault
 fi

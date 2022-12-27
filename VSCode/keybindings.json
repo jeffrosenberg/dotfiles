@@ -11,7 +11,7 @@
   { "key": "cmd+f",                 "command": "workbench.action.terminal.findNextTerminalFocus",
                                        "when": "terminalFocus" },
   { "key": "shift+cmd+o",           "command": "workbench.action.quickOpen" },
+  { "key": "ctrl+shift+o",          "command": "workbench.action.quickOpen" },
   { "key": "cmd+p",                 "command": "workbench.action.showCommands" },
-  { "key": "shift+enter",           "command": "extension.jumpy-word", "when": "editorTextFocus" }
-  { "key": "cmd+j",                 "command": "extension.jumpy-word", "when": "editorTextFocus" }
+  { "key": "ctrl+shift+p",          "command": "workbench.action.showCommands" }
 ]
